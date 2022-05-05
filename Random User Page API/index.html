@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <script id="mainUser-template" type="text/x-handlebars-template">
+        <img id="profile-pic" src="{{mainUser.userPicture}}">    
+        <div class="user-info">
+            <div>
+                {{mainUser.firstName}} {{mainUser.lastName}}
+            </div>
+            <div>
+                {{mainUser.state}}, {{mainUser.city}}
+            </div>
+        </div>
+    </script>
+
+
+    <script id="userFriends-template" type="text/x-handlebars-template">
+        {{#each frindsUser}}
+        <div class="user-info">
+            <br>
+             {{firstName}} {{lastName}}
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script id="randomQuote-template" type="text/x-handlebars-template">
+        <div class="quote-container">
+            <h4 style="font-family: 'Georgia', sans-serif;">Favourite Quote: </h4>
+        </p>{{quote}}</p></div>
+    </script>
+
+
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+        <img id="pokemon-image" src="{{pokemonPicture}}">
+        <p class="pokemon-text" >Favourite Pokemon: {{pokemonName}}</p>
+    </script>
+
+
+
+    <script id="randomText-template" type="text/x-handlebars-template">
+        <div class="meat-text">
+            <div>
+                About Me:
+            </div>
+             <p style="font-size:14px">
+                {{text}}
+             </p>
+        </div>
+    </script>
+
+
+
+
+    <div class="container">
+
+        <!-- <div id="nav">
+            <a class="dropdown-toggle">Saved Users List</a>
+            <ul class="dropdown">
+            </ul>
+        </div> -->
+
+        <div class="dropdown show">
+            <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Show Users List
+            </a>
+            <ul class="dropdown" ></ul>
+        </div>
+
+        <div class="user-container"></div>
+        <div class="quote-container"></div>
+        <div class="content-container">
+            <div class="pokemon-container"></div>
+            <div class="meat-container"></div>
+        </div>
+
+        <div class="friends">
+            <h4>Friends</h4>
+            <div class="friends-container">
+
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="load">Load User Data</button>
+            <button id="display">Display User</button>
+            <button id="saveUserPage">Save User Page</button>
+            <button id="loadUserPage">Load User Page</button>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
