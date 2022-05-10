@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d95a5a;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    align-content: center;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    padding: 1vmax;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px black;
+    background-color: #d95a5a;
+}
+
+img:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.teamPlayers{
+    box-shadow: black 5px 3px 4px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgb(34, 25, 25);
+}
+
+button{
+    display: inline;
+    grid-area: i;
+    padding: 2px;
+    font-size: 1.5vw;
+    display: inline;
+    margin: 6px;
+   
+}
+
+#input{
+    grid-area: i;
+    padding: 2px;
+    font-size: 1.5vw;
+    display: inline;
+    margin: 6px;
+    width: 80%;
+}
+
+#player{
+    display: grid;
+    grid-gap: 1vmax;
+    grid-template-columns: repeat(6, 1fr);
+}
