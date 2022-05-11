@@ -1,11 +1,11 @@
-* {
+ * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #d95a5a;
+    background-color: orange;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
     padding: 1vmax;
     border-radius: 4px;
     box-shadow: 1px 1px 3px black;
-    background-color: #d95a5a;
+  
 }
 
 img:hover {
@@ -24,11 +24,14 @@ img:hover {
     transition: 0.3s;
 }
 
-.teamPlayers{
-    box-shadow: black 5px 3px 4px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid rgb(34, 25, 25);
+.players{
+
+    display: grid;
+    grid-gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 'i .''p p p';
 }
 
 button{
@@ -49,9 +52,41 @@ button{
     margin: 6px;
     width: 80%;
 }
-
-#player{
-    display: grid;
-    grid-gap: 1vmax;
-    grid-template-columns: repeat(6, 1fr);
+.name{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
 }
+
+.jerseyNumber{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.pos{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.player{
+    grid-area: p;
+    grid-gap: 10px;
+    border: 3px solid black;
+} 

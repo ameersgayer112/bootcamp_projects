@@ -1,15 +1,15 @@
 
-class Renderer {
-    constructor(data) {
-      this.data = data;
-    }
 
-    loadPlayers(){
-        const data = this.data;
-        $("#player").empty()
-        const player = $("#players-template").html()
-        const playerTemplate = Handlebars.compile(player)
-        const playerNewHtml = playerTemplate({NBAPlayers:data})
-        $("#player").append(playerNewHtml)
-    }
-}
+const Renderer = () => {
+  const render = (data) => {
+    $(".players").empty()
+    const playerNBA = $("#player-template").html();
+    const playerTemplate = Handlebars.compile(playerNBA)
+    let playerNewHtml = playerTemplate({ players: data });
+    $(".players").append(playerNewHtml);
+  };
+  return {
+    render,
+  };
+};
+
