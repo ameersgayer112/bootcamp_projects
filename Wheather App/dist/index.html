@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+</head>
+<body>
+
+    <input type="text" id="cityinput" placeholder="City">
+    <button id="searchbtn">Search</button>
+
+    <script id="city-template" type="text/x-handlebars-template">
+        {{#each allCities}}
+        <div class="container">
+            <div class="city">
+                <div class="cityTemrature">{{this.temperature}}</div>
+                <div class="CityName">{{this.name}}</div>
+                <div class="condition">{{this.condition}}</div>
+                <div class="imgcondition>">
+                    <img src="{{this.conditionPic}}">
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+
+
+    </script>
+
+    <div id="cities"></div>
+
+
+
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
