@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <title>Wheather</title>
 </head>
 <body>
 
-    <input type="text" id="cityinput" placeholder="City">
+    <h1 class="heading">Weather App</h1>
+
+    <input type="text" id="cityinput" placeholder="City" autofocus>
     <button id="searchbtn">Search</button>
 
     <script id="city-template" type="text/x-handlebars-template">
         {{#each allCities}}
         <div class="container">
             <div class="city">
-                <div class="cityTemrature">{{this.temperature}}</div>
-                <div class="CityName">{{this.name}}</div>
-                <div class="condition">{{this.condition}}</div>
-                <div class="imgcondition>">
-                    <img src="{{this.conditionPic}}">
+                <p class="CityName">{{this.name}}</p>
+                
+                <br>
+                <div class="imgcondition">
+                    <img src="http://openweathermap.org/img/wn/{{this.conditionPic}}@2x.png">
                 </div>
+                <br>
+                <h2 class="condition">{{this.condition}}</h2>
+                <br>
+                <h1 class="cityTemprature">{{this.temperature}}<sup>ºF</sup></h1>
+                <br>
+                {{#if saved }}
+                <button class="removebtn">Remove</button>              
+                {{else}}
+                <button class="savebtn">Save</button>
+                {{/if}}
             </div>
         </div>
         {{/each}}
-
-
-
     </script>
 
     <div id="cities"></div>

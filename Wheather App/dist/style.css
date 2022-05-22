@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E7E9F0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    padding: 1vmax;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px black;
+
+}
+
+
+#cities {
+
+    display: grid;
+    grid-gap: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 'i .''c c c';
+}
+
+#searchbtn {
+    display: inline;
+    grid-area: i;
+    padding: 2px;
+    font-size: 1.5vw;
+    display: inline;
+    margin: 6px;
+
+}
+
+#cityinput {
+    grid-area: i;
+    padding: 2px;
+    font-size: 1.5vw;
+    display: inline;
+    margin: 6px;
+    width: 80%;
+}
+
+.cityTemprature {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 2vw;
+    font-family: Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.CityName {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 6vw;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-align: center;
+    display: inline-block;
+    margin-right: 95%;
+
+}
+
+.condition {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+}
+
+.imgcondition {
+
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 10%;
+    display: inline-block;
+}
+
+.city {
+    grid-area: c;
+    grid-gap: 10px;
+    width: 300px;
+    height: 500px;
+
+}
+
+
+
+.removebtn {
+    display: inline-flex;
+    background-color: #f44336;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    display: inline;
+}
+
+
+.savebtn {
+    display: inline-flex;
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+
+}

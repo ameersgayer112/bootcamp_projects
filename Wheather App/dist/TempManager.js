@@ -1,5 +1,5 @@
 
- class TempManager {
+class TempManager {
     constructor() {
         this.cityData = []
     }
@@ -18,20 +18,25 @@
     }
 
     async saveCity(cityName) {
+        let checkCityinDB = this.cityData.find(city => city.name === cityName)
+        const newCity = await $.ajax({
+            url: "/city",
+            type: 'POST',
+            data: checkCityinDB
 
-        const checkCityinDB = this.cityData.find(city => city.name === cityName)
-        if (checkCityinDB) {
-            console.log('city already exist in DB')
-        }
-        else {
-            const newCity = await $.post(`/city/:${cityName}`)
-            console.log(`${newCity.name} Saved successfuly to DB `)
-            this.cityData.push(newCity)
-        }
+        })
+        console.log(`${newCity.name} Saved successfuly to DB `)
     }
 
     async removeCity(cityName) {
-        const responseFromserver = await $.delete(`/city/:${cityName}`)
+        const checkdelete = await $.ajax({
+            type: "DELETE",
+            url: `/city/${cityName}`,
+        });
+
+        
+
+
         const index = this.cityData.findIndex(city => city.name === cityName)
         this.cityData.splice(index, 1)
     }
