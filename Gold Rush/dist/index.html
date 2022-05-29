@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <title>Gold Rush Game</title>
+</head>
+
+<body>
+
+    <input class="player1Name" placeholder="player1">
+    <input class="player2Name" placeholder="player2">
+    <button class="startGame">Start</button>
+
+    <script id="goldRushScores-template" type="text/x-handlebars-template">
+            <h3>Current coins: {{coins}}</h3>
+            <div class="player1">
+                <span>
+                {{#if (ifNoName player1.player1Name)}}
+                    <h4>Player1 Scores : {{player1.score}}</h4>
+                {{else}}
+                    <h4>Player 1 : {{player1.player1Name}} ------  Scores : {{player1.score}}</h4>
+                {{/if}}
+                </span>
+            </div>
+
+                <br>
+            <div class="player2">
+                <span>
+                    {{#if (ifNoName player2.player2Name)}}
+                        <h4>Player2 Scores : {{player2.score}}</h4>
+                     {{else}} 
+                         <h4>Player : {{player2.player2Name}} ------ Scores : {{player2.score}}</h4>
+                    {{/if}}
+                    </span>
+            </div>
+        <h3 class="winner">And the Winner is : {{winner}}</h3>
+        </div>
+        </script>
+
+
+
+    <script id="goldRush-template" type="text/x-handlebars-template">
+        <div >
+        {{#each myMatrix}}
+            <div class="grid-container">
+                {{#each this }}  
+                     <span class="item1">
+                       {{#if (ifCoin this)}}
+                           <span class="center" id="coins">&#36</span>
+                        {{else if (ifPlayer1 this)}}
+                            <span class="center" id="player1"><i class="fa fa-smile-o"></i></span>
+                        {{else if (ifPlayer2 this)}}
+                             <span class="center" id="player2"><i class="fa fa-smile-o"></i></span>
+                         {{else}}
+                             <span class="center">{{this}}</span></td>
+                          
+                        {{/if}}
+                        </span>
+                    {{/each}}
+                </div>
+                {{/each}}
+        </div>
+        
+    </script>
+
+    <div class="scores"></div>
+    <div class="martix-container"></div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

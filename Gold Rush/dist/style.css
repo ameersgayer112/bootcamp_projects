@@ -1,0 +1,81 @@
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+  gap: 00px;
+  background-color: palevioletred;
+  padding: 10px;
+  zoom: 0.6;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+.item1 {
+  border: 1px;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  left: 20%;
+}
+
+.center {
+  padding: 10px;
+  margin: auto;
+  width: 50%;
+}
+
+#player1 {
+  color:white;
+}
+
+#player2 {
+  color: black;
+}
+
+.winner {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: darkblue;
+}
+#coins {
+  color: yellow;
+  font-size: 90%;
+}
+
+#players1,
+#players2 {
+  height: 1.2rem;
+  width: 10.5rem;
+  background: #d9dfea;
+  font-weight: bold;
+  font-size: 90%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 2px;
+}
+
+button {
+  cursor: pointer;
+  height: 1.2rem;
+  width: 3.5rem;
+  background: #0aca94;
+  font-weight: bold;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 2px;
+}
+

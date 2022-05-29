@@ -47,11 +47,9 @@ router.put('/update/:group1&:group2', function (request, response) {
 
         console.log(expense)
         expense.save()
-        response.status(201).send(` ${expense.item} Updated Succsufly : Done \n And
+        response.status(200).send(` ${expense.item} Updated Succsufly : Done \n And
                                 The new group is ${expense.group}`)
     })
-    response.end()
-
 })
 
 router.get('/expenses/:group', function (request, response) {
