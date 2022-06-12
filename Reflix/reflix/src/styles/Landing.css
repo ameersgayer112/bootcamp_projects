@@ -1,0 +1,43 @@
+*{
+    background-color: black;
+}
+
+.homeTitle{
+    color: aliceblue;
+    text-align: center;
+}
+
+#users-container{
+    display: flex;
+    column-gap: 15px
+
+}
+
+#home-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd"
+      "u u u u";
+}
+.homeTitle{
+    grid-area: hd;
+}
+
+.user{
+    grid-area: u;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    align-content: center;
+    text-align: center;
+    color: aliceblue;
+    cursor: pointer;
+    
+}
+
+
+
+.user-img{
+    width: 200px;
+    height: 200px;
+}
