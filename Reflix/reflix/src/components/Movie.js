@@ -15,8 +15,6 @@ class Movie extends Component {
 
         return (
             <div>
-
-
                 <Link to={`/movies/${movie.id}`}>
                     <span>
                         <img className='filmImg' src={movie.img} alt="" />

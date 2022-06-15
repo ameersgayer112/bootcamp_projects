@@ -1,0 +1,39 @@
+#main-links > a{
+    margin: 10px;
+    color: black;
+    text-shadow: -1px -1px 0 #ecf0f1, 1px -1px 0 #ecf0f1, -1px 1px 0 #ecf0f1, 1px 1px 0 #ecf0f1;
+}
+
+*{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+a{
+    cursor: pointer;
+    color: black;
+}
+
+#home-background{
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.balanceTitle{
+    position:absolute;
+    margin: 10px;
+    text-shadow: -1px -1px 0 #ecf0f1, 1px -1px 0 #ecf0f1, -1px 1px 0 #ecf0f1, 1px 1px 0 #ecf0f1;
+    top: -10px;
+    right: 0px;
+    color: darkcyan;
+
+}
